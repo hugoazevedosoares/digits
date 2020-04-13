@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter basename="/petmat">
+      <BrowserRouter basename="/digits">
         <AppContainer id="main">
           <Header />
           <Route exact path="/" component={Home} />
