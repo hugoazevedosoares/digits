@@ -47,6 +47,14 @@ export const MainTitle = styled.h1`
   margin-bottom: 2em;
 `;
 
+export const SubTitle = styled.h2`
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 2em;
+  margin-bottom: 2em;
+`;
+
 export const MainContainer = styled.main`
   max-width: 730px;
   margin: auto;
@@ -55,7 +63,7 @@ export const MainContainer = styled.main`
 export const Input = styled.input`
   width: calc(100% - 32px);
   height: 2em;
-  padding: 10px 16px;
+  padding: 0.25em 16px;
   font-size: 18px;
   line-height: 1.3333333;
   letter-spacing: 0.1em;

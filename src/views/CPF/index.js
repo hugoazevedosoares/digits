@@ -17,17 +17,12 @@ export default function CPF() {
       return;
     }
 
-    console.log(value);
     setCPF(value);
 
     if (value.length === CPF_LENGTH) {
-      try {
-        const verificationDigits = calculateCPFDigits(value);
-        const cpfWithDigits = formatCPFWithDigits(value, verificationDigits);
-        return setResult(cpfWithDigits);
-      } catch (e) {
-        console.error(e);
-      }
+      const verificationDigits = calculateCPFDigits(value);
+      const cpfWithDigits = formatCPFWithDigits(value, verificationDigits);
+      return setResult(cpfWithDigits);
     }
 
     setResult("");
@@ -43,10 +38,8 @@ export default function CPF() {
       <MaskedInput
         value={cpf}
         mask={[/\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/, ".", /\d/, /\d/, /\d/]}
-        className="form-control input"
         guide={true}
         placeholder="Digite o seu CPF"
-        id="input-cpf"
         type="text"
         onChange={handleInput}
         render={(ref, props) => <Input ref={ref} {...props} />}

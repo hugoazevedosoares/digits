@@ -14,8 +14,8 @@ const navigationItems = [
     path: "/cpf",
   },
   {
-    title: "Cartão de crédito (EM BREVE)",
-    path: "/credit",
+    title: "ISBN (EM BREVE)",
+    path: "/isbn",
     disabled: true,
   },
   {

@@ -8,7 +8,9 @@ export default function Home() {
       <MainTitle>Bem vindo!</MainTitle>
       <p>
         Neste site você pode descobrir mais sobre dígitos verificadores e como
-        são utilizados em diversas partes do seu dia a dia.
+        são utilizados em diversas partes do seu dia a dia. Para mais
+        informações e referências bibliográficas, verifique a seção{" "}
+        <NavLink to={"/about"}>Sobre</NavLink>.
       </p>
       <p>
         Navegue pelas seções e descubra como estes dígitos funcionam e afetam a
