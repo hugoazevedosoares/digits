@@ -1,14 +1,18 @@
 import React from "react";
 import { MainTitle, MainContainer } from "../../styles";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
     <MainContainer>
       <MainTitle>Bem vindo!</MainTitle>
-      <p>Neste site você pode descobrir mais sobre dígitos verificadores.</p>
+      <p>
+        Neste site você pode descobrir mais sobre dígitos verificadores e como
+        são utilizados em diversas partes do seu dia a dia.
+      </p>
       <p>
         Navegue pelas seções e descubra como estes dígitos funcionam e afetam a
-        sua vida.
+        sua vida. Um dica, começe pela seção <NavLink to={"/cpf"}>CPF</NavLink>.
       </p>
       <p>
         Não se preocupe, nenhuma de suas informações será salva ou

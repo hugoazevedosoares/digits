@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { List, ListItem, Brand, Navigation, About } from "./styles";
+import { List, ListItem, Navigation } from "./styles";
 
 export default function Navbar({
   matchesLocation,
@@ -10,15 +10,18 @@ export default function Navbar({
 }) {
   return (
     <List>
-      <Brand>
+      <ListItem>
         <NavLink to="/" isActive={matchesLocation(brand)}>
-          PET-MAT
+          {brand.title}
         </NavLink>
-      </Brand>
+      </ListItem>
       <Navigation>
         <List>
           {navigationItems.map((item) => (
-            <ListItem key={item.path}>
+            <ListItem
+              key={item.path}
+              className={item.disabled ? "inner-link-holder--disabled" : ""}
+            >
               <NavLink to={item.path} isActive={matchesLocation(item.path)}>
                 {item.title}
               </NavLink>
@@ -26,11 +29,11 @@ export default function Navbar({
           ))}
         </List>
       </Navigation>
-      <About>
+      <ListItem>
         <NavLink to={about.path} isActive={matchesLocation(about)}>
-          Sobre
+          {about.title}
         </NavLink>
-      </About>
+      </ListItem>
     </List>
   );
 }

@@ -13,6 +13,7 @@ export default function Menu({
   return (
     <StyledMenu open={open}>
       <NavLink
+        className={brand.disabled ? "disabled" : ""}
         onClick={() => setOpen(false)}
         to={brand.path}
         isActive={matchesLocation(brand.path)}
@@ -21,6 +22,7 @@ export default function Menu({
       </NavLink>
       {navigationItems.map((item) => (
         <NavLink
+          className={item.disabled ? "disabled" : ""}
           onClick={() => setOpen(false)}
           key={item.path}
           to={item.path}
@@ -30,6 +32,7 @@ export default function Menu({
         </NavLink>
       ))}
       <NavLink
+        className={brand.disabled ? "disabled" : ""}
         onClick={() => setOpen(false)}
         to={about.path}
         isActive={matchesLocation(about.path)}

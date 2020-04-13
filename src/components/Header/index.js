@@ -4,7 +4,7 @@ import CollapsedNavbar from "./CollapsedNavbar";
 import Media from "react-media";
 
 const brand = {
-  title: "PET-MAT UFOP",
+  title: "Dígitos verificadores",
   path: "/",
 };
 
@@ -14,12 +14,14 @@ const navigationItems = [
     path: "/cpf",
   },
   {
-    title: "Cartão de crédito",
+    title: "Cartão de crédito (EM BREVE)",
     path: "/credit",
+    disabled: true,
   },
   {
-    title: "Código de barras",
+    title: "Código de barras (EM BREVE)",
     path: "/barcode",
+    disabled: true,
   },
 ];
 

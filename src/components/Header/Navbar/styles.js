@@ -58,13 +58,9 @@ export const ListItem = styled.li`
   }
 `;
 
-export const Brand = styled(ListItem)``;
-
 export const Navigation = styled(ListItem)`
   li {
     margin-left: 2em;
     margin-right: 2em;
   }
 `;
-
-export const About = styled(ListItem)``;

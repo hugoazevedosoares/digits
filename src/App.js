@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, Redirect, BrowserRouter } from "react-router-dom";
 import { GlobalStyle, AppContainer } from "./styles";
 import CPF from "./views/CPF";
 import Home from "./views/Home";
@@ -15,6 +15,7 @@ function App() {
           <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/cpf" component={CPF} />
+          <Redirect to="/" />
           <Footer />
         </AppContainer>
       </BrowserRouter>

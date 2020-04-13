@@ -1,1 +1,9 @@
 @import-normalize;
+
+li.inner-link-holder--disabled a {
+  pointer-events: none;
+}
+
+a.disabled {
+  pointer-events: none;
+}
